@@ -10,6 +10,8 @@ import json
 import qrcode
 import qrcode.image.svg
 
+import sys
+
 
 #=====================================================
 #                QR-Image-to-SVG-V1
@@ -120,6 +122,23 @@ def main():
     windll.shcore.SetProcessDpiAwareness(1)
     root.title("QR-Image-to-SVG")
     root.geometry("480x400")
+
+    #----------------- For Icon ------------------------------------
+    # Load icon safely whether running from source or bundled .exe
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS  # Temporary folder created by PyInstaller
+    else:
+        base_path = os.path.abspath(".")
+
+    icon_path = os.path.join(base_path, "icon.ico")
+    root.iconbitmap(icon_path)
+    #---------------------------------------------------------------
+    
+    # Or Use only this if you don't care about executable
+    #root.iconbitmap("icon.ico")
+    
+    #---------------------------------------------------------------
+
     
     main_frame = tk.Frame(root, bg='#333333' ,pady=20)
     main_frame.pack(fill=tk.BOTH , expand = True)
@@ -159,3 +178,4 @@ if __name__ == "__main__":
 
 
     
+
