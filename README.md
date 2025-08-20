@@ -1,10 +1,11 @@
-# 🧾 QR Code Image To SVG Generator - (QR-Image-to-SVG)
+# 🧾 QR Code Image To SVG Generator - (QR-Image-to-SVG)  <img src="icon.ico" alt="ICON" width="60"/>
 
 A simple Tkinter GUI app to:
 
 * Extract Qr code content from an image
 * Save it as a `.json` file
 * Generate a new QR code from that content and save it as an SVG
+
 
 ---
 # Features
@@ -94,14 +95,21 @@ QR-Image-to-SVG/
 
 ## 👤 Created by Aman Lakhuja
 
-* [MY-GitHub](https://github.com/AmanLakhuja) 
-
+* [MY-GitHub](https://github.com/AmanLakhuja)
+* [QR-Image-to-SVG](https://github.com/AmanLakhuja/QR-Image-to-SVG)
 ---
 
 ## License
 
-* Check out the license agrement file in the project directiory 
+* Check out the license agrement file in the project directiory - This Project is currently using MIT License .
+* Rights on the Project icon `icon.ico` and `icon.svg` are Reserved.
+---
 
+## Project Icon
+
+<img src="icon.ico" alt="ICON" width="140"/>
+
+---
 
 
 
