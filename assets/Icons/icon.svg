@@ -1,0 +1,28 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="256" height="256" rx="20" fill="#1e2a2f"/>
+  
+  <!-- QR Code blocks group -->
+  <rect x="32" y="56" width="48" height="48" fill="#00cc99"/>
+  <rect x="96" y="56" width="12" height="12" fill="#00cc99"/>
+  <rect x="112" y="56" width="12" height="12" fill="#00cc99"/>
+  <rect x="96" y="72" width="12" height="12" fill="#00cc99"/>
+  <rect x="112" y="72" width="12" height="12" fill="#00cc99"/>
+  <rect x="32" y="112" width="12" height="12" fill="#00cc99"/>
+  <rect x="48" y="112" width="12" height="12" fill="#00cc99"/>
+  <rect x="32" y="128" width="12" height="12" fill="#00cc99"/>
+  <rect x="48" y="128" width="12" height="12" fill="#00cc99"/>
+  <rect x="64" y="112" width="12" height="12" fill="#00cc99"/>
+  
+  <!-- Diagonal arrow with aligned arrowhead -->
+  <g transform="translate(120, 110) rotate(45)">
+    <!-- Shaft: thicker rectangle with smaller corner radius for flush join -->
+    <rect x="0" y="3" width="44" height="10" fill="#28a1a1" rx="1"/>
+    <!-- Arrowhead: wider triangle, aligned with shaft edge -->
+    <polygon points="44,-4 66,8 44,20" fill="#28a1a1"/>
+  </g>
+  
+  <!-- SVG file icon shifted to bottom-right -->
+  <rect x="176" y="152" width="48" height="64" rx="6" fill="#135e60"/>
+  <text x="188" y="190" font-size="14" font-family="Arial" fill="white" font-weight="bold">SVG</text>
+</svg>
