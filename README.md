@@ -71,12 +71,23 @@ A simple Tkinter GUI app to:
 
 ```bash
 QR-Image-to-SVG/
-├── qr_image_to_svg.py       -- Your script (rename from untitled.py or similar)
-├── requirements.txt         -- Dependency list
-├── README.md                -- Project description & instructions
-├── LICENSE			             -- Project LICENSE agreement
-└── dist/
-	└── qr_image_to_svg.exe		-- Released Executable File		   
+├── qr_image_to_svg.py       #-- My script
+├── icon.ico                 #-- Project Icon
+├── README.md                #-- Project description & instructions
+├── requirements.txt         #-- Dependency list
+├── LICENSE			         #-- Project LICENSE agreement
+├── dist/
+│	└── qr_image_to_svg.exe		#-- Released Executable File		
+│
+└── assets
+	   ├── guide_on_build_executable.md  #-- My Guide to build (exe)
+	   ├──dlls
+	   │	├── libiconv.dll      #-- Required file for the exe build
+       │    └── libzbar-64.dll    #-- Required file for the exe build
+       │
+       └──Icons
+	    	├── icon.ico          #-- Project Icon in (ico) format
+            └── icon.svg          #-- Project Icon in (svg) format
 ```
 
 ---
