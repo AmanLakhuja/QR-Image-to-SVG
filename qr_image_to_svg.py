@@ -26,6 +26,10 @@ import sys
 
 
 def extract_qr(root, output_box):
+    
+    # Clear output box before adding new content
+    output_box.delete("1.0", tk.END)
+    
     # Open file dialog
     file_path = filedialog.askopenfilename(
         title="Select QR Code Image",
@@ -59,6 +63,8 @@ def extract_qr(root, output_box):
             with open(json_filename, "w", encoding="utf-8") as f:
                 f.write(qr_data)
 
+            output_box.insert(tk.END, f"\n📁 Working on :- {base_name}\n")
+            output_box.insert(tk.END, f"============================\n")
             output_box.insert(tk.END, f"\n✅ Qr Code content saved As :-\n")
             output_box.insert(tk.END, f"▶ {json_filename}\n")
             output_box.see(tk.END)  # Scroll to end
@@ -109,6 +115,7 @@ def json_to_qr_svg(json_file, output_file="qr_code.svg" ,output_box=None):
 
     if output_box:
         output_box.insert(tk.END, f"\n✅ New Qr code Generated\n")
+        output_box.insert(tk.END, f"----------------------------")
         output_box.insert(tk.END, f"\n✅ New Qr code Saved as :-\n")
         output_box.insert(tk.END, f"▶ {output_file}\n")
 
@@ -121,7 +128,7 @@ def main():
     root = tk.Tk()
     windll.shcore.SetProcessDpiAwareness(1)
     root.title("QR-Image-to-SVG")
-    root.geometry("480x400")
+    root.geometry("480x500")
 
     #----------------- For Icon ------------------------------------
     # Load icon safely whether running from source or bundled .exe
@@ -147,7 +154,7 @@ def main():
     creator_label = tk.Label(
         main_frame,
         text="Created by Aman Lakhuja \n https://github.com/AmanLakhuja",
-        font=("Arial", 12, "italic"),
+        font=("Arial", 12, "bold"),
         bg="#333333",
         fg="#aaaaaa",
         pady=10
@@ -166,7 +173,7 @@ def main():
     )
     btn.pack(expand=True)
 
-    output_box = tk.Text(main_frame, height=8, bg="#222222", fg="white", font=("Consolas", 12), padx=20)
+    output_box = tk.Text(main_frame, height=12, bg="#222222", fg="white", font=("Consolas", 12), padx=20 , spacing1=6)
     output_box.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 
     root.mainloop()
@@ -178,4 +185,5 @@ if __name__ == "__main__":
 
 
     
+
 
